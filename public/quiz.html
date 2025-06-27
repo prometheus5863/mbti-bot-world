@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI Quiz – MBTI Bot World</title>
+
+  <!-- Tailwind CSS (via CDN for fallback) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="w-full p-4 flex justify-between items-center bg-black bg-opacity-60 fixed top-0 left-0 z-50">
+    <a href="index.html" class="text-2xl font-bold tracking-wide">MBTI Bots</a>
+    <div class="space-x-6 text-lg">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#bots" class="nav-link">Bots</a>
+      <a href="types.html" class="nav-link">Types</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="quiz.html" class="nav-link font-semibold underline">Quiz</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-10 text-center px-6">
+    <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">Discover Your MBTI Type</h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Answer 24 logic-based questions to uncover your dominant cognitive preferences.
+    </p>
+  </section>
+
+  <!-- Quiz Form -->
+  <section class="px-6 pb-24">
+    <form id="quizForm" class="max-w-4xl mx-auto space-y-10" data-aos="fade-up" data-aos-delay="200">
+      <!-- Questions will load here -->
+    </form>
+
+    <div class="text-center mt-10">
+      <button id="submitQuiz" class="bg-teal-500 text-black px-6 py-3 rounded-full font-bold hover:bg-teal-400 transition">
+        Submit Answers
+      </button>
+    </div>
+
+    <div id="result" class="max-w-3xl mx-auto mt-12 p-6 bg-white text-black rounded-lg shadow-lg hidden">
+      <!-- Result displayed here -->
+    </div>
+  </section>
+
+  <script>
+    AOS.init({ once: true, duration: 800 });
+
+    const cognitiveFunctions = ["Ti", "Te", "Fi", "Fe", "Ni", "Ne", "Si", "Se"];
+    const scale = { "Never": 1, "Rarely": 2, "Sometimes": 3, "Often": 4, "Always": 5 };
+    const options = Object.keys(scale);
+
+    async function loadQuestions() {
+      try {
+        const res = await fetch("assets/data/question_bank.json");
+        const data = await res.json();
+
+        const form = document.getElementById("quizForm");
+        const selectedQuestions = [];
+
+        cognitiveFunctions.forEach((func) => {
+          const shuffled = data[func].sort(() => Math.random() - 0.5).slice(0, 3);
+          shuffled.forEach((q, i) => {
+            selectedQuestions.push({ ...q, id: `${func}_${i}`, function: func });
+          });
+        });
+
+        selectedQuestions.forEach((q, index) => {
+          const block = document.createElement("div");
+          block.className = "bg-gray-100 text-black p-6 rounded-lg shadow-md";
+
+          block.innerHTML = `
+            <p class="mb-4 font-semibold">${index + 1}. (${q.function}) ${q.question}</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              ${options.map(opt => `
+                <label class="flex items-center space-x-2">
+                  <input type="radio" name="${q.id}" value="${scale[opt]}" required>
+                  <span>${opt}</span>
+                </label>
+              `).join('')}
+            </div>
+          `;
+          form.appendChild(block);
+        });
+
+        // Handle submission
+        document.getElementById("submitQuiz").addEventListener("click", function (e) {
+          e.preventDefault();
+          let totalScores = {
+            Ti: 0, Te: 0, Fi: 0, Fe: 0, Ni: 0, Ne: 0, Si: 0, Se: 0
+          };
+
+          for (let q of selectedQuestions) {
+            const input = document.querySelector(`input[name="${q.id}"]:checked`);
+            if (!input) return alert("Please answer all questions.");
+            totalScores[q.function] += parseInt(input.value);
+          }
+
+          const highestFunc = Object.entries(totalScores).sort((a, b) => b[1] - a[1])[0][0];
+          const typeGuess = guessMBTIFromFunction(highestFunc);
+
+          const resultBox = document.getElementById("result");
+          resultBox.innerHTML = `
+            <h2 class="text-3xl font-bold mb-2">Your Dominant Function: <span class="text-purple-600">${highestFunc}</span></h2>
+            <p class="text-lg mb-4">Your likely MBTI Type: <strong>${typeGuess}</strong></p>
+            <a href="bots/${typeGuess.toLowerCase()}.html" class="inline-block mt-4 bg-indigo-600 px-4 py-2 text-white rounded hover:bg-indigo-500 transition">Talk to ${typeGuess} Bot →</a>
+          `;
+          resultBox.classList.remove("hidden");
+          resultBox.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function guessMBTIFromFunction(func) {
+          const map = {
+            Ti: "INTP",
+            Te: "ENTJ",
+            Fi: "INFP",
+            Fe: "ENFJ",
+            Ni: "INFJ",
+            Ne: "ENFP",
+            Si: "ISFJ",
+            Se: "ESTP"
+          };
+          return map[func] || "INTP";
+        }
+
+      } catch (err) {
+        console.error("Failed to load quiz:", err);
+        document.getElementById("quizForm").innerHTML = `<p class="text-red-500">Failed to load quiz. Please try again later.</p>`;
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadQuestions);
+  </script>
+</body>
+</html>

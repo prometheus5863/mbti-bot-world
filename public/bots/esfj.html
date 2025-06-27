@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESFJ – The Consul Bot</title>
+  <link href="/assets/css/output.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="/js/chat.js" defer></script>
+  <style>
+    .bot-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-pink-100 via-red-200 to-orange-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="w-full p-4 flex justify-between items-center bg-white bg-opacity-60 fixed top-0 left-0 z-50">
+    <a href="/index.html" class="text-2xl font-bold tracking-wide text-red-700">MBTI Bots</a>
+    <div class="space-x-6 text-lg">
+      <a href="/types.html" class="hover:underline">All Types</a>
+      <a href="/about.html" class="hover:underline">About</a>
+    </div>
+  </nav>
+
+  <!-- Bot Container -->
+  <main class="pt-32 pb-16 px-4 flex flex-col items-center text-center">
+    <img src="/assets/images/esfj-avatar.png" alt="ESFJ Bot Avatar" class="bot-avatar mb-4" data-aos="zoom-in">
+    <h1 class="text-4xl font-bold text-red-600 mb-2">ESFJ – The Consul</h1>
+    <p class="text-red-800 max-w-xl mb-6">“Nothing brings people together like good food, laughter, and shared memories.”</p>
+
+    <!-- Chat Container -->
+    <div id="chat-box" class="w-full max-w-2xl mx-auto mt-6 flex flex-col space-y-3 bg-white bg-opacity-40 p-6 rounded-lg shadow-md">
+      <!-- Dynamic chat bubbles will appear here -->
+    </div>
+
+    <!-- Chat Input Form -->
+    <form id="chat-form" class="mt-4 flex gap-2 max-w-2xl mx-auto px-4">
+      <input id="chat-input" type="text" placeholder="Ask the bot something..." class="flex-grow px-4 py-2 rounded-md bg-white bg-opacity-70 text-gray-800 placeholder-gray-500">
+      <button type="submit" class="bg-red-400 hover:bg-red-500 px-4 py-2 rounded-md text-white">Send</button>
+    </form>
+
+    <div class="mt-8">
+      <a href="/types.html" class="text-red-600 hover:underline">← Back to All Types</a>
+    </div>
+  </main>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

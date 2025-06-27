@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI Types – MBTI Bot World</title>
+  <link rel="stylesheet" href="assets/build/tailwind.css">
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-950 via-purple-900 to-black text-white">
+
+<!-- Navbar -->
+  <nav class="w-full p-4 flex justify-between items-center bg-black bg-opacity-60 fixed top-0 left-0 z-50">
+    <a href="index.html" class="text-2xl font-bold tracking-wide">MBTI Bots</a>
+      <div class="space-x-6 text-lg">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#bots" class="nav-link">Bots</a>
+        <a href="types.html" class="nav-link font-semibold underline">Types</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="quiz.html" class="nav-link">Quiz</a>
+
+      </div>
+  </nav>
+
+
+  <!-- Header -->
+  <section class="pt-32 pb-12 text-center px-6">
+    <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">The 16 MBTI Types</h1>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Dive into each personality’s essence, strengths, and preferred entertainment. Explore the world as they see it — through aesthetics, logic, and feelings.
+    </p>
+  </section>
+
+  <!-- Types Grid -->
+  <section class="pb-24 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <!-- Dynamically Generated Cards -->
+      <!-- You can loop through a JSON list for scalability -->
+      <script>
+        const types = [
+          { code: "INTP", name: "The Logician", desc: "Deep thinkers. They love puzzles, sci-fi, and theories. Often binging animated philosophy on YouTube.", style: "bg-gray-900 text-teal-300" },
+          { code: "ENFP", name: "The Campaigner", desc: "Spontaneous souls. They adore music festivals, storytelling games, and vivid aesthetics like Studio Ghibli.", style: "bg-gradient-to-br from-pink-600 to-red-500 text-yellow-100" },
+          { code: "INTJ", name: "The Mastermind", desc: "Strategists. Drawn to chess, AI documentaries, world-building novels, and games like Civilization.", style: "bg-gradient-to-r from-gray-800 via-black to-gray-900 text-purple-300" },
+          { code: "INFJ", name: "The Advocate", desc: "Idealistic and visionary. Love meditative soundscapes, deep films, and games like Journey or Gris.", style: "bg-gradient-to-r from-indigo-700 to-purple-800 text-pink-200" },
+          { code: "ENTP", name: "The Debater", desc: "Love argument, invention, and fast-paced creativity. Fans of wordplay, tech expos, and improv.", style: "bg-gradient-to-r from-blue-900 to-indigo-800 text-blue-200" },
+          { code: "ISFJ", name: "The Defender", desc: "Calm and generous. Prefer cozy books, baking, and heartfelt traditions.", style: "bg-gradient-to-tr from-green-700 to-teal-700 text-green-200" },
+          { code: "ESFP", name: "The Entertainer", desc: "Life of the party. Love music, dance, and colorful fun. Likely found at concerts and TikTok.", style: "bg-gradient-to-br from-yellow-400 to-orange-500 text-black" },
+          { code: "ISTJ", name: "The Inspector", desc: "Duty-bound and structured. Enjoy logical planning, detective novels, and retro routines.", style: "bg-gradient-to-br from-gray-800 to-slate-900 text-white" },
+          { code: "ESTP", name: "The Dynamo", desc: "Loves adrenaline, sports, and action films. Always on the go, ready for the next thrill.", style: "bg-gradient-to-tr from-red-700 to-orange-600 text-yellow-100" },
+          { code: "INFP", name: "The Mediator", desc: "Poetic and soulful. Enjoy fantasy books, lo-fi beats, and stargazing alone.", style: "bg-gradient-to-tr from-teal-800 to-indigo-700 text-emerald-200" },
+          { code: "ESFJ", name: "The Consul", desc: "Friendly organizers. Host brunches, love community, and sitcoms with strong bonds.", style: "bg-gradient-to-br from-pink-200 to-red-300 text-red-900" },
+          { code: "ISTP", name: "The Virtuoso", desc: "Hands-on problem solvers. Tinkerers into DIY tech, biking, or gaming rigs.", style: "bg-gradient-to-tr from-gray-700 to-black text-gray-100" },
+          { code: "ENTJ", name: "The Commander", desc: "Bold leaders. Driven by strategy, success, and winning — TED Talks & strategy games.", style: "bg-gradient-to-tr from-red-900 to-purple-900 text-red-100" },
+          { code: "ENFJ", name: "The Protagonist", desc: "Charismatic. Love helping others grow, reading people, and speaking with power.", style: "bg-gradient-to-r from-indigo-600 to-blue-500 text-white" },
+          { code: "ISFP", name: "The Adventurer", desc: "Artistic souls. At peace in nature, sketching, listening to ambient music.", style: "bg-gradient-to-tr from-green-600 to-lime-500 text-lime-100" },
+          { code: "ESTJ", name: "The Executive", desc: "Efficient and no-nonsense. Love structure, progress, and winning. Fans of productivity tools.", style: "bg-gradient-to-r from-yellow-300 to-orange-400 text-black" },
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const container = document.querySelector(".grid");
+          types.forEach((type, i) => {
+            const card = document.createElement("a");
+            card.href = `/bots/${type.code.toLowerCase()}.html`;
+            card.className = `card rounded-xl overflow-hidden p-6 ${type.style}`;
+            card.setAttribute("data-aos", "fade-up");
+            card.setAttribute("data-aos-delay", `${100 + i * 50}`);
+            card.innerHTML = `
+              <h2 class="text-2xl font-bold">${type.code}</h2>
+              <p class="mt-2">${type.desc.includes('🧠') || type.desc.includes('💡') ? type.name : ''}</p>
+              <p class="text-sm mt-4">${type.desc}</p>
+            `;
+            container.appendChild(card);
+          });
+        });
+      </script>
+    </div>
+  </section>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>

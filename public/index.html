@@ -1,16 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>start with create-tailwind-app</title>  
-    <link rel="stylesheet" href="./assets/css/build/tailwind.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI Bot World</title>
+  <link rel="stylesheet" href="assets/build/tailwind.css">
 
+  
+  
+
+
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out both;
+    }
+    .bot-card:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body class="bg-gray-600">
+<body class="bg-gradient-to-br from-purple-800 via-indigo-900 to-black text-white font-sans">
 
-    <h2 class="p-10"> start </h2>
-    
+  <!-- Navbar -->
+    <nav class="w-full p-4 flex justify-between items-center bg-black bg-opacity-60 fixed top-0 left-0 z-50">
+      <a href="index.html" class="text-2xl font-bold tracking-wide">MBTI Bots</a>
+      <div class="space-x-6 text-lg">
+        <a href="index.html#home" class="nav-link font-semibold underline">Home</a>
+        <a href="index.html#bots" class="nav-link">Bots</a>
+        <a href="types.html" class="nav-link">Types</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="quiz.html" class="nav-link">Quiz</a>
+
+      </div>
+    </nav>
+
+
+  <!-- Hero -->
+  <section id="home" class="h-screen flex items-center justify-center text-center px-6 pt-20">
+    <div class="max-w-2xl fade-in-up">
+      <h2 class="text-6xl font-extrabold mb-6 drop-shadow-xl">Chat with All 16 MBTI Bots 🤖</h2>
+      <p class="text-lg text-gray-300 mb-10">Each bot reflects a unique personality. Dive in, connect, explore emotional AI.</p>
+      <a href="#bots" class="inline-block bg-teal-400 text-black px-8 py-4 rounded-full font-semibold hover:bg-teal-300 transition transform hover:scale-105">Explore Bots</a>
+    </div>
+  </section>
+
+  <!-- Bots Grid -->
+  <section id="bots" class="py-32 px-6 bg-gray-100 text-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold text-center mb-16">Meet the Bots</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
+        <a href="bots/intp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/intp.png" alt="INTP">
+
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">INTP – The Logician</h3>
+            <p class="text-gray-600 text-sm">Curious, skeptical, brainy.</p>
+          </div>
+        </a>
+        <a href="bots/enfp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/enfp.png" alt="ENFP" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ENFP – The Campaigner</h3>
+            <p class="text-gray-600 text-sm">Playful, passionate, spontaneous.</p>
+          </div>
+        </a>
+        <a href="bots/infj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/infj.png" alt="INFJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">INFJ – The Advocate</h3>
+            <p class="text-gray-600 text-sm">Visionary, calm, complex.</p>
+          </div>
+        </a>
+        <a href="bots/estp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/estp.png" alt="ESTP" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ESTP – The Dynamo</h3>
+            <p class="text-gray-600 text-sm">Energetic, bold, action-driven.</p>
+          </div>
+        </a>
+        <a href="bots/entp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/entp.png" alt="ENTP" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ENTP – The Debater</h3>
+            <p class="text-gray-600 text-sm">Innovative, outspoken, creative.</p>
+          </div>
+        </a>
+        <a href="bots/intj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/intj.png" alt="INTJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">INTJ – The Mastermind</h3>
+            <p class="text-gray-600 text-sm">Strategic, logical, visionary.</p>
+          </div>
+        </a>
+        <a href="bots/isfj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/isfj.png" alt="ISFJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ISFJ – The Defender</h3>
+            <p class="text-gray-600 text-sm">Loyal, gentle, meticulous.</p>
+          </div>
+        </a>
+        <a href="bots/esfj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/esfj.png" alt="ESFJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ESFJ – The Consul</h3>
+            <p class="text-gray-600 text-sm">Warm, organized, cooperative.</p>
+          </div>
+        </a>
+        <a href="bots/istp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/istp.png" alt="ISTP" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ISTP – The Virtuoso</h3>
+            <p class="text-gray-600 text-sm">Practical, bold, hands-on.</p>
+          </div>
+        </a>
+        <a href="bots/isfp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/isfp.png" alt="ISFP" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ISFP – The Adventurer</h3>
+            <p class="text-gray-600 text-sm">Artistic, curious, gentle.</p>
+          </div>
+        </a>
+        <a href="bots/esfp.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/esfp.png" alt="ESFP" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ESFP – The Entertainer</h3>
+            <p class="text-gray-600 text-sm">Charming, playful, energetic.</p>
+          </div>
+        </a>
+        <a href="bots/entj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/entj.png" alt="ENTJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ENTJ – The Commander</h3>
+            <p class="text-gray-600 text-sm">Confident, assertive, strategic.</p>
+          </div>
+        </a>
+        <a href="bots/enfj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/enfj.png" alt="ENFJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ENFJ – The Protagonist</h3>
+            <p class="text-gray-600 text-sm">Inspiring, empathetic, charismatic.</p>
+          </div>
+        </a>
+        <a href="bots/istj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/istj.png" alt="ISTJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ISTJ – The Inspector</h3>
+            <p class="text-gray-600 text-sm">Responsible, methodical, reserved.</p>
+          </div>
+        </a>
+        <a href="bots/estj.html" class="bot-card bg-white rounded-lg overflow-hidden shadow-xl">
+          <img src="assets/images/estj.png" alt="ESTJ" class="w-full h-48 object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">ESTJ – The Executive</h3>
+            <p class="text-gray-600 text-sm">Efficient, driven, organized.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types Info -->
+  <section id="types" class="py-24 px-6 bg-indigo-900 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">The 16 MBTI Types</h2>
+      <p class="text-lg text-gray-300 mb-4">
+        Learn how personality is structured across four dimensions: Energy (E/I), Perception (S/N), Decision-making (T/F), and Lifestyle (J/P).
+      </p>
+      <a href="/types.html" class="inline-block mt-6 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">View All Types</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6 bg-black text-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">About This Project</h2>
+      <p class="text-lg text-gray-400">
+        MBTI Bot World is an experimental platform combining MBTI psychology and conversational AI. Each bot simulates emotional behavior tied to its function stack. Coming soon: personality quizzes, smart profiles, and VR-style interaction via Web3.
+      </p>
+    </div>
+  </section>
+
 </body>
 </html>

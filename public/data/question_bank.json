@@ -1,0 +1,957 @@
+"Ti": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C"
+    }
+  ],
+  "Te": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Te"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Te"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Te"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Te"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Te"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Te"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Te"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Te"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Te"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Te"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Te"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Te"
+    }
+  ],
+  "Ni": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Ni"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Ni"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Ni"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Ni"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Ni"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Ni"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Ni"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Ni"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Ni"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Ni"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Ni"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Ni"
+    }
+  ],
+  "Ne": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Ne"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Ne"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Ne"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Ne"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Ne"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Ne"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Ne"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Ne"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Ne"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Ne"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Ne"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Ne"
+    }
+  ],
+  "Fe": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Fe"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Fe"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Fe"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Fe"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Fe"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Fe"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Fe"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Fe"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Fe"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Fe"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Fe"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Fe"
+    }
+  ],
+  "Fi": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Fi"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Fi"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Fi"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Fi"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Fi"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Fi"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Fi"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Fi"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Fi"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Fi"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Fi"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Fi"
+    }
+  ],
+  "Si": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Si"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Si"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Si"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Si"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Si"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Si"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Si"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Si"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Si"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Si"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Si"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Si"
+    }
+  ],
+  "Se": [
+    {
+      "question": "If all engineers are logical, and some artists are engineers, can we conclude some artists are logical?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Se"
+    },
+    {
+      "question": "A robot follows this rule: 'If A is true, then B must also be true.' If A is true and B is false, what\u2019s wrong?",
+      "options": [
+        "The robot is malfunctioning",
+        "Nothing",
+        "It\u2019s unclear"
+      ],
+      "answer": "The robot is malfunctioning",
+      "function": "Se"
+    },
+    {
+      "question": "Syllogism: All penguins are birds. All birds have wings. Do penguins have wings?",
+      "options": [
+        "Yes",
+        "No",
+        "Cannot be determined"
+      ],
+      "answer": "Yes",
+      "function": "Se"
+    },
+    {
+      "question": "If A \u2192 B and B \u2192 C, what follows?",
+      "options": [
+        "A \u2192 C",
+        "C \u2192 A",
+        "A \u2192 B \u2192 C"
+      ],
+      "answer": "A \u2192 C",
+      "function": "Se"
+    },
+    {
+      "question": "What is the logical error in: 'If I\u2019m sleeping, I\u2019m not awake. I\u2019m awake. Therefore, I\u2019m not sleeping.'",
+      "options": [
+        "No error",
+        "Circular logic",
+        "Valid reasoning"
+      ],
+      "answer": "No error",
+      "function": "Se"
+    },
+    {
+      "question": "You see two contradictory reports. What\u2019s the best course?",
+      "options": [
+        "Ignore both",
+        "Find the contradiction",
+        "Trust the more recent one"
+      ],
+      "answer": "Find the contradiction",
+      "function": "Se"
+    },
+    {
+      "question": "If X is always greater than Y and Y equals Z, then X is greater than?",
+      "options": [
+        "Z",
+        "X",
+        "Cannot be determined"
+      ],
+      "answer": "Z",
+      "function": "Se"
+    },
+    {
+      "question": "Which is valid reasoning?",
+      "options": [
+        "All cats are mammals. Some mammals are dogs. So all cats are dogs.",
+        "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal."
+      ],
+      "answer": "All humans are mortal. Socrates is a human. Therefore, Socrates is mortal.",
+      "function": "Se"
+    },
+    {
+      "question": "In a system: If NOT A \u2192 B, and B is false, what can you conclude?",
+      "options": [
+        "A is true",
+        "A is false",
+        "B is true"
+      ],
+      "answer": "A is true",
+      "function": "Se"
+    },
+    {
+      "question": "Which operator is used for logical AND?",
+      "options": [
+        "&&",
+        "||",
+        "!"
+      ],
+      "answer": "&&",
+      "function": "Se"
+    },
+    {
+      "question": "Which is a contradiction?",
+      "options": [
+        "It is raining and it is not raining",
+        "If A then B",
+        "A or B"
+      ],
+      "answer": "It is raining and it is not raining",
+      "function": "Se"
+    },
+    {
+      "question": "If A equals B and B equals C, then?",
+      "options": [
+        "A equals C",
+        "A is unrelated to C",
+        "C is greater than A"
+      ],
+      "answer": "A equals C",
+      "function": "Se"
+    }
+  ]
+}
