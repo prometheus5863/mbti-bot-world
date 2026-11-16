@@ -6,7 +6,7 @@
   <title>MBTI Quiz – MBTI Bot World</title>
 
   <!-- Tailwind CSS (via CDN for fallback) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="assets/build/tailwind.css" rel="stylesheet">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -57,7 +57,7 @@
   </section>
 
   <script>
-    AOS.init({ once: true, duration: 800 });
+    window.AOS && AOS.init({ once: true, duration: 800 });
 
     const cognitiveFunctions = ["Ti", "Te", "Fi", "Fe", "Ni", "Ne", "Si", "Se"];
     const scale = { "Never": 1, "Rarely": 2, "Sometimes": 3, "Often": 4, "Always": 5 };
@@ -65,7 +65,7 @@
 
     async function loadQuestions() {
       try {
-        const res = await fetch("assets/data/question_bank.json");
+        const res = await fetch("data/question_bank.json");
         const data = await res.json();
 
         const form = document.getElementById("quizForm");
@@ -85,9 +85,9 @@
           block.innerHTML = `
             <p class="mb-4 font-semibold">${index + 1}. (${q.function}) ${q.question}</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              ${options.map(opt => `
+              ${q.options.map(opt => `
                 <label class="flex items-center space-x-2">
-                  <input type="radio" name="${q.id}" value="${scale[opt]}" required>
+                  <input type="radio" name="${q.id}" value="${opt.replace(/"/g, "&quot;")}" required>
                   <span>${opt}</span>
                 </label>
               `).join('')}
@@ -106,7 +106,7 @@
           for (let q of selectedQuestions) {
             const input = document.querySelector(`input[name="${q.id}"]:checked`);
             if (!input) return alert("Please answer all questions.");
-            totalScores[q.function] += parseInt(input.value);
+            if (input.value === q.answer) totalScores[q.function] += 1;
           }
 
           const highestFunc = Object.entries(totalScores).sort((a, b) => b[1] - a[1])[0][0];
@@ -114,9 +114,9 @@
 
           const resultBox = document.getElementById("result");
           resultBox.innerHTML = `
-            <h2 class="text-3xl font-bold mb-2">Your Dominant Function: <span class="text-purple-600">${highestFunc}</span></h2>
-            <p class="text-lg mb-4">Your likely MBTI Type: <strong>${typeGuess}</strong></p>
-            <a href="bots/${typeGuess.toLowerCase()}.html" class="inline-block mt-4 bg-indigo-600 px-4 py-2 text-white rounded hover:bg-indigo-500 transition">Talk to ${typeGuess} Bot →</a>
+            <h2 class="text-3xl font-bold mb-2">Your strongest function in this round: <span class="text-purple-600">${highestFunc}</span></h2>
+            <p class="text-lg mb-4">A type that leads with it: <strong>${typeGuess}</strong></p>
+            <a href="bots/bot.html?type=${typeGuess.toLowerCase()}" class="inline-block mt-4 bg-indigo-600 px-4 py-2 text-white rounded hover:bg-indigo-500 transition">Talk to ${typeGuess} Bot →</a>
           `;
           resultBox.classList.remove("hidden");
           resultBox.scrollIntoView({ behavior: 'smooth' });

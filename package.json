@@ -1,22 +1,13 @@
 {
-  "name": "create-tailwind-app",
+  "name": "mbti-bot-world",
   "version": "1.0.1",
-  "description": "Build the HTML template with tailwind css.",
+  "description": "Static site: sixteen scripted personality bots and a cognitive-function quiz.",
   "type": "commonjs",
   "scripts": {
-    "start": "live-server ./public ",
-    "build": "postcss css/main.css -o public/assets/css/build/tailwind.css --minify",
-    "tailwind": "tailwindcss  -i css/main.css -o public/assets/css/build/tailwind.css --minify  & live-server ./public ",
-    "dev": " live-server ./public & postcss css/main.css -o public/assets/css/build/tailwind.css --minify --watch  "
+    "start": "live-server ./docs",
+    "build": "tailwindcss -i css/main.css -o docs/assets/build/tailwind.css --minify"
   },
-  "keywords": [
-    "HTML template",
-    "tailwindcss",
-    "tailwind",
-    "HTML",
-    " css framework"
-  ],
-  "author": "Rajdeep Singh",
+  "author": "Harsh Vardhan Gururani",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
